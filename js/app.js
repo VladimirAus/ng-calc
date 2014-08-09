@@ -16,10 +16,9 @@ angular.module('tes.xperiment.calc', [])
 			$scope.multiplier = 10;
 		};
 		$scope.actionCe = function() {
-			$scope.displayNumber = 0;
-			$scope.mem1 = 0;
+			// $scope.displayNumber = 0;
 			$scope.mem2 = 0;
-			$scope.multiplier = 10;
+			$scope.postCmd();
 		};
 		$scope.actionPlus = function(sign) {
 			$scope.mem1 = parseFloat("" + $scope.displayNumber);
