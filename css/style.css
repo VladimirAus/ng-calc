@@ -1,0 +1,11 @@
+.calc-actions button,
+.calc-numbers button {
+	width: 100%;
+}
+
+.calc-display {
+	text-align: right;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 24px;
+}
