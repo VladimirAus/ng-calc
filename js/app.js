@@ -11,11 +11,11 @@ angular.module('tes.xperiment.calc', [])
 		$scope.operation = "";
 		// $scope.action = '';
 
-		$scope.actionEq = function() {
+		/*$scope.actionEq = function() {
 			$scope.actionPlus(1); // TODO: replace with multiple actions
 			$scope.postCmd();
 			$scope.operation = "";
-		};
+		};*/
 		$scope.postCmd = function() {
 			$scope.mem1 = "0";
 			$scope.displayNumber = $scope.mem2;
@@ -68,6 +68,11 @@ angular.module('tes.xperiment.calc', [])
 			}
 		};
 		$scope.getDisplayNumber = function() {
-			return parseFloat($scope.displayNumber);
+			if (($scope.hasDot()) && ($scope.displayNumber[$scope.displayNumber.length-1] == "0")) {
+			}
+			else {
+				$scope.displayNumber = "" + parseFloat($scope.displayNumber);
+			}
+			return $scope.displayNumber;
 		};
 }]);
